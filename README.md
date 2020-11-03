@@ -2,7 +2,7 @@
 
 beginner level android projects with android studio:
 
-#nSIMPLYNOTE : ! From scratch
+# SIMPLYNOTE : ! From scratch
 
 Navigation drawer view + Navigation host fragment 
 recycler view for main presentation
