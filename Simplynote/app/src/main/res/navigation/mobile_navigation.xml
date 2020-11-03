@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    android:label="ta7ya touness"
+    app:startDestination="@id/notesFragment">
+
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.ouledahmed.simplynote.NotesFragment"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes">
+        <action
+            android:id="@+id/action_notesFragment_to_createEditFragment"
+            app:destination="@id/CreateEditFragment" />
+        <action
+            android:id="@+id/action_notesFragment_to_readFragment"
+            app:destination="@id/ReadFragment" />
+        <action
+            android:id="@+id/action_notesFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_notesFragment_to_searchFragment2"
+            app:destination="@id/searchFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/CreateEditFragment"
+        android:name="com.ouledahmed.simplynote.CreateEditFragment"
+        android:label="fragment_create_edit"
+        tools:layout="@layout/fragment_create_edit">
+        <argument
+            android:name="idArg"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="titleArg"
+            android:defaultValue="Title missing"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="descriptionArg"
+            android:defaultValue="Description missing"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="contentArg"
+            android:defaultValue="Content missing"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="isImportantArg"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="isUrgentArg"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_createEditFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ReadFragment"
+        android:name="com.ouledahmed.simplynote.ReadFragment"
+        android:label="fragment_read"
+        tools:layout="@layout/fragment_read">
+        <argument
+            android:name="idArg"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="titleArg"
+            android:defaultValue="Title missing"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="descriptionArg"
+            android:defaultValue="Description missing"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="contentArg"
+            android:defaultValue="Content missing"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="isImportantArg"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="isUrgentArg"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_readFragment_to_createEditFragment"
+            app:destination="@id/CreateEditFragment" />
+        <action
+            android:id="@+id/action_readFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.ouledahmed.simplynote.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/searchFragment2"
+        android:name="com.ouledahmed.simplynote.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment2_to_ReadFragment"
+            app:destination="@id/ReadFragment" />
+    </fragment>
+</navigation>
